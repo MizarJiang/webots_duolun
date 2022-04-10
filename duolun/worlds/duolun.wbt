@@ -1,0 +1,299 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.44913994698467263 0.7883223934481318 0.4205010249818831 4.615120160243321
+  position -5.396359637469689 2.9029808750668944 -0.13513467267498924
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  luminosity -1
+}
+Floor {
+}
+DEF 舵轮 Robot {
+  translation -3.52052 0.169745 -0.449334
+  rotation 3.03001047079112e-08 0.9999999999990515 -1.3769572016653977e-06 3.092820931823525
+  children [
+    DEF LB_DIR HingeJoint {
+      jointParameters HingeJointParameters {
+        position 0.7850000025755521
+        axis 0 1 0
+        anchor -0.2 -0.05 -0.2
+      }
+      device [
+        RotationalMotor {
+          name "lb_dir_motor"
+        }
+      ]
+      endPoint DEF RB_DIR Solid {
+        translation -0.2 -0.05 -0.2
+        rotation 0 0.9999999999999999 0 0.785000002575552
+        children [
+          DEF LB_RUN HingeJoint {
+            jointParameters HingeJointParameters {
+              position 107.18433824948673
+              axis 0 0 1
+              anchor 0 -0.02 0
+            }
+            device [
+              RotationalMotor {
+                name "lb_run_motor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.02 0
+              rotation -0.9666844330353804 -0.18099923701482398 -0.18099857216872395 4.678508617957008
+              children [
+                DEF run Shape {
+                  appearance PBRAppearance {
+                    emissiveColor 1 0 0.498039
+                  }
+                  geometry Cylinder {
+                    height 0.05
+                    radius 0.1
+                  }
+                }
+              ]
+              boundingObject USE run
+              physics Physics {
+                density -1
+                mass 0.1
+              }
+              rotationStep 0
+            }
+          }
+          DEF dir Shape {
+            appearance PBRAppearance {
+              emissiveColor 0 0.666667 0
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.1
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE dir
+        physics Physics {
+          density -1
+          mass 0.1
+        }
+      }
+    }
+    DEF RB_DIR HingeJoint {
+      jointParameters HingeJointParameters {
+        position -0.7849999998717179
+        axis 0 1 0
+        anchor -0.2 -0.05 0.2
+      }
+      device [
+        RotationalMotor {
+          name "rb_dir_motor"
+        }
+      ]
+      endPoint DEF RB_DIR Solid {
+        translation -0.2 -0.05 0.2
+        rotation 0 -1 0 0.7849999998717181
+        children [
+          DEF RB_RUN HingeJoint {
+            jointParameters HingeJointParameters {
+              position 107.13445078298672
+              axis 0 0 1
+              anchor 0 -0.02 0
+            }
+            device [
+              RotationalMotor {
+                name "rb_run_motor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.02 0
+              rotation -0.9748857658236795 -0.15747686461360433 -0.1574762861698439 4.686953072294047
+              children [
+                DEF run Shape {
+                  appearance PBRAppearance {
+                    emissiveColor 1 0 0.498039
+                  }
+                  geometry Cylinder {
+                    height 0.05
+                    radius 0.1
+                  }
+                }
+              ]
+              boundingObject USE run
+              physics Physics {
+                density -1
+                mass 0.1
+              }
+              rotationStep 0
+            }
+          }
+          DEF dir Shape {
+            appearance PBRAppearance {
+              emissiveColor 0 0.666667 0
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.1
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE dir
+        physics Physics {
+          density -1
+          mass 0.1
+        }
+      }
+    }
+    DEF LF_DIR HingeJoint {
+      jointParameters HingeJointParameters {
+        position -0.7849999998724346
+        axis 0 1 0
+        anchor 0.2 -0.05 -0.2
+      }
+      device [
+        RotationalMotor {
+          name "lf_dir_motor"
+        }
+      ]
+      endPoint DEF RF_DIR Solid {
+        translation 0.1999998894664064 -0.05 -0.2000001104455646
+        rotation 0 -0.9999999999999999 0 0.7849996090186404
+        children [
+          DEF LF_RUN HingeJoint {
+            jointParameters HingeJointParameters {
+              position 107.13444526337709
+              axis 0 0 1
+              anchor 0 -0.02 0
+            }
+            device [
+              RotationalMotor {
+                name "lf_run_motor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.02 0
+              rotation -0.9748866134693134 -0.15747424083790285 -0.15747366240378027 4.686953941494432
+              children [
+                DEF run Shape {
+                  appearance PBRAppearance {
+                    emissiveColor 1 0 0.498039
+                  }
+                  geometry Cylinder {
+                    height 0.05
+                    radius 0.1
+                  }
+                }
+              ]
+              boundingObject USE run
+              physics Physics {
+                density -1
+                mass 0.1
+              }
+              rotationStep 0
+            }
+          }
+          DEF dir Shape {
+            appearance PBRAppearance {
+              emissiveColor 0 0.666667 0
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.1
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE dir
+        physics Physics {
+          density -1
+          mass 0.1
+        }
+      }
+    }
+    DEF RF_DIR HingeJoint {
+      jointParameters HingeJointParameters {
+        position 0.7850000025757327
+        axis 0 1 0
+        anchor 0.2 -0.05 0.2
+      }
+      device [
+        RotationalMotor {
+          name "rf_dir_motor"
+        }
+      ]
+      endPoint DEF RF_DIR Solid {
+        translation 0.2 -0.05 0.2
+        rotation 0 1 0 0.7850000025757327
+        children [
+          DEF RF_RUN HingeJoint {
+            jointParameters HingeJointParameters {
+              position 107.18433376125404
+              axis 0 0 1
+              anchor 0 -0.02 0
+            }
+            device [
+              RotationalMotor {
+                name "rf_run_motor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 -0.02 0
+              rotation -0.9666852187814153 -0.1809971387298412 -0.18099647389144863 4.678509430316008
+              children [
+                DEF run Shape {
+                  appearance PBRAppearance {
+                    emissiveColor 1 0 0.498039
+                  }
+                  geometry Cylinder {
+                    height 0.05
+                    radius 0.1
+                  }
+                }
+              ]
+              boundingObject USE run
+              physics Physics {
+                density -1
+                mass 0.1
+              }
+              rotationStep 0
+            }
+          }
+          DEF dir Shape {
+            appearance PBRAppearance {
+              emissiveColor 0 0.666667 0
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.1
+            }
+          }
+        ]
+        boundingObject USE dir
+        physics Physics {
+          density -1
+          mass 0.1
+        }
+      }
+    }
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        emissiveColorMap ImageTexture {
+        }
+      }
+      geometry Box {
+        size 0.5 0.05 0.5
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+    density -1
+    mass 0.5
+  }
+  controller "duolun_1"
+}
